@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "title": "Chicken Shawarma Bowls",
+    "description": "Flavorful Middle Eastern-inspired chicken bowls with aromatic spices, fresh vegetables, and wholesome grains. Perfect for meal prep or a healthy weeknight dinner.",
+    "cookTime": "45 minutes (plus marinating time)",
+    "servings": "4-6 servings",
+    "tags": ["Mediterranean", "Healthy", "Meal Prep", "Chicken", "Bowls", "Gluten-Free Option"],
+    "ingredients": [
+      "2 lbs boneless skinless chicken thighs",
+      "2 cups cooked brown rice or quinoa",
+      "1 cucumber, diced",
+      "1 cup cherry tomatoes, halved",
+      "1/2 cup chopped parsley",
+      "1/2 cup hummus",
+      "Whole wheat pita or naan",
+      "Optional: Tzatziki (store-bought or homemade)",
+      "Marinade:",
+      "4 tbsp olive oil",
+      "2.5 tbsp lemon juice",
+      "2.5 tsp ground cumin",
+      "2 tsp paprika",
+      "1.5 tsp garlic powder or 3 garlic cloves, minced",
+      "3/4 tsp ground turmeric (optional)",
+      "1/3 tsp cinnamon (optional)",
+      "1.5 tsp kosher salt",
+      "3/4 tsp black pepper"
+    ],
+    "instructions": [
+      "Mix marinade ingredients in a bowl or Ziploc bag.",
+      "Add chicken thighs and coat well with the marinade.",
+      "Cover and refrigerate for at least 30 minutes, ideally 4-8 hours for best flavor.",
+      "Grill or pan-sear chicken until fully cooked (internal temp 165°F), then slice into strips.",
+      "Assemble bowls with rice/quinoa as the base, then top with sliced chicken, diced cucumber, cherry tomatoes, and chopped parsley.",
+      "Add a dollop of hummus and serve with warm pita or naan bread.",
+      "Optional: drizzle with tzatziki or lemon juice."
+    ],
+    "notes": "For meal prep, store components separately and assemble when ready to eat. Chicken can be marinated up to 24 hours ahead. This recipe is naturally gluten-free when served with rice/quinoa instead of pita."
+  },
+  {
+    "id": 2,
+    "title": "Grilled Chicken Tenders with Avocado-Lime Yogurt Sauce",
+    "description": "Perfectly seasoned grilled chicken tenders served with a creamy, tangy avocado-lime yogurt sauce. Paired with quinoa and steamed broccoli for a complete, healthy meal.",
+    "cookTime": "25 minutes",
+    "servings": "4 servings",
+    "tags": ["Healthy", "Grilled", "Chicken", "Protein", "Gluten-Free", "High-Protein", "Clean Eating"],
+    "ingredients": [
+      "1.5 lbs chicken breast tenders",
+      "Seasoning:",
+      "1 tsp garlic powder or 2 garlic cloves, minced",
+      "1 tsp kosher salt",
+      "1/2 tsp black pepper",
+      "Avocado-Lime Yogurt Sauce:",
+      "1 ripe avocado",
+      "1/2 cup plain Greek yogurt",
+      "Juice of 1 lime",
+      "1 garlic clove, minced",
+      "1/4 to 1/2 tsp salt (to taste)",
+      "Sides:",
+      "2 cups cooked quinoa",
+      "1 head broccoli, cut into florets"
+    ],
+    "instructions": [
+      "Preheat grill to 375°F.",
+      "Season chicken tenders with garlic powder, salt, and pepper on both sides.",
+      "Grill for 12-15 minutes, flipping once halfway through, until internal temp reaches 165°F.",
+      "While chicken cooks, blend avocado, Greek yogurt, lime juice, minced garlic, and salt until smooth and creamy.",
+      "Steam broccoli florets until fork-tender (about 5-7 minutes).",
+      "Serve grilled chicken tenders over quinoa with steamed broccoli, drizzled or dipped in the avocado-lime sauce."
+    ],
+    "notes": "The avocado sauce is best made fresh but can be stored in the fridge for up to 2 days with plastic wrap pressed directly onto the surface to prevent browning. This works great on any grill or even in a grill pan indoors."
+  },
+  {
+    "id": 3,
+    "title": "Homemade Taco Seasoning",
+    "description": "A flavorful, customizable taco seasoning blend that's perfect for 2 pounds of ground meat. Skip the store-bought packets and make your own with simple pantry spices.",
+    "cookTime": "5 minutes",
+    "servings": "Seasons 2 lbs of meat",
+    "tags": ["Seasoning", "Mexican", "Spice Blend", "Pantry Staple", "Quick", "Homemade"],
+    "ingredients": [
+      "2 tablespoons chili powder",
+      "1/2 teaspoon garlic powder",
+      "1/2 teaspoon onion powder",
+      "1/2 teaspoon dried oregano",
+      "1 teaspoon paprika",
+      "3 teaspoons ground cumin",
+      "1/2 teaspoon sea salt",
+      "Cholula hot sauce (approx 15 shakes)"
+    ],
+    "instructions": [
+      "Combine all dry ingredients (chili powder, garlic powder, onion powder, oregano, paprika, cumin, and salt) in a small bowl.",
+      "Mix well until evenly combined.",
+      "Brown 2 pounds of ground meat (beef, turkey, or chicken) in a large skillet.",
+      "Add the spice mixture to the cooked meat and stir to coat evenly.",
+      "Add approximately 15 shakes of Cholula hot sauce (or to taste).",
+      "Cook for 2-3 minutes more, stirring frequently, until fragrant and well combined."
+    ],
+    "notes": "This seasoning blend can be made ahead and stored in an airtight container for up to 6 months. Adjust the Cholula to your heat preference - start with less and add more as needed. Works great with ground beef, turkey, chicken, or even plant-based meat alternatives."
+  }
+] 
