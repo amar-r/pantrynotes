@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import SearchBar from '../components/SearchBar';
 import RecipeList from '../components/RecipeList';
+import SEO from '../components/SEO';
 import recipesData from '../data/recipes.json';
 
 const CookingPotCSS = () => (
@@ -45,7 +46,11 @@ const HomePage = () => {
   const hasRecipes = recipesData.length > 0;
 
   return (
-    <div className="space-y-12">
+    <>
+      <SEO 
+        description="A collection of my favorite tested recipes, cooking techniques, and kitchen notes. Shared for inspiration and culinary exploration."
+      />
+      <div className="space-y-12">
       {/* Hero Section */}
       <div className="text-center py-16 animate-fade-in">
         <div className="space-y-8">
@@ -103,8 +108,9 @@ const HomePage = () => {
             />
           </div>
         </>
-      )}
-    </div>
+              )}
+      </div>
+    </>
   );
 };
 
