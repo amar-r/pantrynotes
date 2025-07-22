@@ -3,62 +3,45 @@ import ThemeToggle from './ThemeToggle';
 
 const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-neutral-50 dark:bg-neutral-900 transition-colors duration-200">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-neutral-900">
       {/* Header */}
-      <header className="bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-600 sticky top-0 z-50 transition-colors duration-200 shadow-subtle">
-        <div className="container">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-3 group focus-visible">
-              <div className="w-12 h-12 bg-primary-600 dark:bg-primary-500 rounded-xl flex items-center justify-center group-hover:bg-primary-700 dark:group-hover:bg-primary-600 transition-colors duration-200 shadow-subtle">
-                <span className="text-white font-bold text-xl">P</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-neutral-800 dark:text-neutral-100">PantryNotes</h1>
-                <p className="text-sm text-muted">Recipe Collection</p>
-              </div>
-            </Link>
-            
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="nav-link focus-visible">
-                All Recipes
-              </Link>
-              <ThemeToggle />
-            </nav>
-
-            {/* Mobile menu */}
-            <div className="md:hidden flex items-center space-x-4">
-              <ThemeToggle />
-              <button className="theme-toggle" aria-label="Menu">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+      <header className="bg-neutral-900 text-white dark:bg-neutral-900 dark:text-white sticky top-0 z-50 shadow-header">
+        <div className="w-full max-w-screen-lg mx-auto flex items-center justify-between px-4 py-3">
+          {/* Logo/Brand */}
+          <Link to="/" className="flex items-center space-x-3 group focus-visible">
+            <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center group-hover:bg-indigo-700 transition-colors duration-200 shadow-card">
+              <span className="text-white font-bold text-lg">P</span>
             </div>
+            <span className="text-2xl font-extrabold tracking-tight">PantryNotes</span>
+          </Link>
+          {/* Nav */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-indigo-400 hover:text-white font-semibold transition-colors duration-200 focus-visible">
+              Recipes
+            </Link>
+            <ThemeToggle />
+          </nav>
+          {/* Mobile menu (just theme toggle for now) */}
+          <div className="md:hidden flex items-center">
+            <ThemeToggle />
           </div>
         </div>
       </header>
-
       {/* Main Content */}
-      <main className="flex-1 container animate-fade-in">
+      <main className="flex-1 w-full max-w-screen-lg mx-auto px-4 py-10 bg-gray-50 dark:bg-neutral-900 transition-colors duration-200">
         {children}
       </main>
-
-                  {/* Footer */}
-            <footer className="bg-white dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-600 mt-auto transition-colors duration-200 shadow-subtle">
-              <div className="container">
-                <div className="text-center space-y-3">
-                  <p className="text-muted text-sm">
-                    Crafted with care for everyone
-                  </p>
-                  <p className="text-xs text-subtle">
-                    PantryNotes © {new Date().getFullYear()} • Accessible & Inclusive Design
-                  </p>
-                  <p className="text-xs text-subtle mt-2">
-                    Disclaimer: These recipes are shared for informational purposes only. Please use your own judgment regarding food safety and dietary restrictions. The author is not responsible for any adverse effects from following these recipes.
-                  </p>
-                </div>
-              </div>
-            </footer>
+      {/* Footer */}
+      <footer className="bg-neutral-900 text-white dark:bg-neutral-900 dark:text-white border-t border-neutral-800 mt-auto">
+        <div className="w-full max-w-screen-lg mx-auto py-8 text-center space-y-2 px-4">
+          <p className="text-sm text-neutral-400 dark:text-neutral-500">
+            PantryNotes © {new Date().getFullYear()} • Powered by React & Tailwind CSS
+          </p>
+          <p className="text-xs text-neutral-500 dark:text-neutral-600">
+            Disclaimer: These recipes are shared for informational purposes only. Please use your own judgment regarding food safety and dietary restrictions. The author is not responsible for any adverse effects from following these recipes.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

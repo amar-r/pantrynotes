@@ -17,17 +17,17 @@ const RecipeList = ({ recipes, searchTerm, selectedTag }) => {
 
   if (filteredRecipes.length === 0) {
     return (
-      <div className="text-center py-16 animate-fade-in">
-        <div className="section max-w-md mx-auto">
+      <div className="text-center py-24 animate-fade-in">
+        <div className="bg-white dark:bg-neutral-800 rounded-2xl shadow-card max-w-md mx-auto p-10">
           <div className="space-y-6">
-            <div className="w-20 h-20 mx-auto bg-primary-50 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
-              <svg className="w-10 h-10 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-20 h-20 mx-auto bg-indigo-50 dark:bg-cyan-900/30 rounded-full flex items-center justify-center">
+              <svg className="w-10 h-10 text-indigo-500 dark:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-3">No recipes found</h3>
-              <p className="text-muted leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">No recipes found</h3>
+              <p className="text-neutral-500 dark:text-neutral-300 leading-relaxed">
                 {searchTerm || selectedTag 
                   ? "Try adjusting your search criteria or browse all recipes." 
                   : "Start building your collection by adding your first recipe."
@@ -49,30 +49,25 @@ const RecipeList = ({ recipes, searchTerm, selectedTag }) => {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8 w-full max-w-screen-lg mx-auto">
       {/* Results Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-100">
-            {filteredRecipes.length === recipes.length 
-              ? `All Recipes (${recipes.length})`
-              : `${filteredRecipes.length} of ${recipes.length} recipes`
-            }
-          </h2>
-          {(searchTerm || selectedTag) && (
-            <p className="text-sm text-muted mt-2 font-medium">
-              Filtered results
-            </p>
-          )}
-        </div>
+      <div className="flex items-center justify-between mb-2">
+        <h2 className="text-lg md:text-2xl font-bold text-indigo-600 dark:text-cyan-400">
+          {filteredRecipes.length === recipes.length 
+            ? `All Recipes (${recipes.length})`
+            : `${filteredRecipes.length} of ${recipes.length} recipes`
+          }
+        </h2>
+        {(searchTerm || selectedTag) && (
+          <span className="text-neutral-400 dark:text-neutral-300 text-base font-medium">Filtered results</span>
+        )}
       </div>
-
       {/* Recipe Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
         {filteredRecipes.map((recipe, index) => (
           <div 
             key={recipe.id} 
-            className="animate-scale-in"
+            className="animate-fade-in"
             style={{ animationDelay: `${index * 0.05}s` }}
           >
             <RecipeCard recipe={recipe} />

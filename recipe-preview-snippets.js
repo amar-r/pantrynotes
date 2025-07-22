@@ -2,13 +2,13 @@
 // Use these in recipe-preview-template.html browser console
 
 // Recipe 1: Chicken Shawarma Bowls
-// updatePreview({
-//     title: "Chicken Shawarma Bowls",
-//     description: "Flavorful Middle Eastern-inspired chicken bowls with aromatic spices, fresh vegetables, and wholesome grains. Perfect for meal prep or a healthy weeknight dinner.",
-//     cookTime: "45 minutes (plus marinating time)",
-//     servings: "4-6 servings",
-//     tags: ["Mediterranean", "Healthy", "Meal Prep", "Chicken", "Bowls"]
-// });
+updatePreview({
+    title: "Chicken Shawarma Bowls",
+    description: "Flavorful Middle Eastern-inspired chicken bowls with aromatic spices, fresh vegetables, and wholesome grains. Perfect for meal prep or a healthy weeknight dinner.",
+    cookTime: "45 minutes (plus marinating time)",
+    servings: "4-6 servings",
+    tags: ["Mediterranean", "Healthy", "Meal Prep", "Chicken", "Bowls"]
+});
 
 // Recipe 2: Grilled Chicken Tenders with Avocado-Lime Yogurt Sauce
 updatePreview({
