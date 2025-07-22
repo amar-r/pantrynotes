@@ -5,7 +5,7 @@
     "description": "Flavorful Middle Eastern-inspired chicken bowls with aromatic spices, fresh vegetables, and wholesome grains. Perfect for meal prep or a healthy weeknight dinner.",
     "cookTime": "45 minutes (plus marinating time)",
     "servings": "4-6 servings",
-    "tags": ["Mediterranean", "Healthy", "Meal Prep", "Chicken", "Bowls", "Gluten-Free Option"],
+    "tags": ["Mediterranean", "Healthy", "Meal Prep", "Chicken", "Bowls", "Gluten-Free"],
     "ingredients": [
       "2 lbs boneless skinless chicken thighs",
       "2 cups cooked brown rice or quinoa",
@@ -133,5 +133,29 @@
       "Remove from smoker, let rest for 30 minutes, then shred with forks or meat claws."
     ],
     "notes": "The mustard won't affect the taste but helps the rub stick. Don't rush the process - low and slow is key for tender pulled pork. Internal temp of 204°F ensures the collagen breaks down properly for easy shredding."
+  },
+  {
+    "id": 5,
+    "title": "All-Purpose Chicken Seasoning",
+    "description": "A simple, versatile spice blend for chicken—perfect for grilling, roasting, or pan-searing. Adds flavor and a touch of smokiness to any cut.",
+    "cookTime": "5 minutes",
+    "servings": "For 1-2 lbs chicken",
+    "tags": ["Seasoning", "Chicken", "Quick", "Spice Blend", "Meal Prep"],
+    "ingredients": [
+      "2 tablespoons olive oil",
+      "1 teaspoon salt",
+      "1/2 teaspoon black pepper",
+      "1 teaspoon garlic powder",
+      "1 teaspoon onion powder",
+      "1 teaspoon smoked paprika",
+      "1/4 teaspoon cayenne pepper"
+    ],
+    "instructions": [
+      "In a small bowl, mix together all the spices with the olive oil to form a paste.",
+      "Pat chicken dry and coat evenly with the seasoning mixture.",
+      "Let sit for 10-15 minutes (or refrigerate up to 24 hours for more flavor).",
+      "Grill, roast, or pan-sear chicken as desired until fully cooked."
+    ],
+    "notes": "This blend works for chicken breasts, thighs, drumsticks, or wings. Also great on vegetables or potatoes! Adjust cayenne for more or less heat."
   }
 ] 

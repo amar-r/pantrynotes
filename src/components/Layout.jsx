@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
                     Crafted with care for everyone
                   </p>
                   <p className="text-xs text-subtle">
-                    PantryNotes © 2024 • Accessible & Inclusive Design
+                    PantryNotes © {new Date().getFullYear()} • Accessible & Inclusive Design
                   </p>
                   <p className="text-xs text-subtle mt-2">
                     Disclaimer: These recipes are shared for informational purposes only. Please use your own judgment regarding food safety and dietary restrictions. The author is not responsible for any adverse effects from following these recipes.
