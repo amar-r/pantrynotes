@@ -40,4 +40,4 @@ layout: ../../layouts/MarkdownPostLayout.astro
 - Optional: drizzle with tzatziki or lemon juice.
 
 ## Note
-For meal prep, store components separately and assemble when ready to eat. Chicken can be marinated up to 24 hours ahead. This recipe is naturally gluten-free when served with rice/quinoa instead of pita."
+For meal prep, store components separately and assemble when ready to eat. Chicken can be marinated up to 24 hours ahead. This recipe is naturally gluten-free when served with rice/quinoa instead of pita.
