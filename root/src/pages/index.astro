@@ -2,6 +2,8 @@
 const pageTitle = "Pantry Notes"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Header from "../components/Header.astro"
+import BlogPost from "../components/BlogPost.astro"
+const allPosts = Object.values(import.meta.glob('./posts/*.md', {eager: true}))
 ---
 
 <html lang="en">
@@ -15,8 +17,9 @@ import Header from "../components/Header.astro"
 	<body>
 		<BaseLayout pageTitle={pageTitle}>
 		<ul>
-			<li><a href="/posts/recipe1/">Smoked Pulled Pork</a></li>
-			<li><a href="/posts/recipe2/">All-Purpose Chicken Seasoning</a></li>
+			<!-- <li><a href="/posts/recipe1/">Smoked Pulled Pork</a></li>
+			<li><a href="/posts/recipe2/">All-Purpose Chicken Seasoning</a></li> -->
+			{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
 		</ul>
 		</BaseLayout>
 	</body>
