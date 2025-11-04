@@ -31,13 +31,13 @@ layout: ../../layouts/MarkdownPostLayout.astro
 - 3/4 tsp black pepper
 
 ## Instructions
-- Mix marinade ingredients in a bowl or Ziploc bag.
-- Add chicken thighs and coat well with the marinade.
-- Cover and refrigerate for at least 30 minutes, ideally 4-8 hours for best flavor.
-- Grill or pan-sear chicken until fully cooked (internal temp 165°F), then slice into strips.
-- Assemble bowls with rice/quinoa as the base, then top with sliced chicken, diced cucumber, cherry tomatoes, and chopped parsley.
-- Add a dollop of hummus and serve with warm pita or naan bread.
-- Optional: drizzle with tzatziki or lemon juice.
+1. Mix marinade ingredients in a bowl or Ziploc bag.
+2. Add chicken thighs and coat well with the marinade.
+3. Cover and refrigerate for at least 30 minutes, ideally 4-8 hours for best flavor.
+4. Grill or pan-sear chicken until fully cooked (internal temp 165°F), then slice into strips.
+5. Assemble bowls with rice/quinoa as the base, then top with sliced chicken, diced cucumber, cherry tomatoes, and chopped parsley.
+6. Add a dollop of hummus and serve with warm pita or naan bread.
+7. Optional: drizzle with tzatziki or lemon juice.
 
-## Note
+## Notes
 For meal prep, store components separately and assemble when ready to eat. Chicken can be marinated up to 24 hours ahead. This recipe is naturally gluten-free when served with rice/quinoa instead of pita.
