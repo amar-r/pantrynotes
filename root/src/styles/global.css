@@ -1,0 +1,382 @@
+/* ---------------------------------------
+   Recipe Site Base Styles
+   --------------------------------------- */
+
+/* Design tokens */
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --text: #0f172a;           /* slate-900 */
+  --muted: #475569;          /* slate-600 */
+  --line: #e5e7eb;           /* gray-200 */
+  --accent: #ea580c;         /* orange-600 (warm, food-friendly) */
+  --accent-contrast: #ffffff;
+  --link: #2563eb;           /* blue-600 */
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+  --maxw: 80ch;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --surface: #0f172a;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --line: #1f2937;
+    --link: #60a5fa;
+    --shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+}
+
+/* Base reset & type */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  background: var(--bg);
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--maxw);
+  padding: 2rem 1.25rem 4rem;
+  color: var(--text);
+  background: transparent;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
+               "Segoe UI Emoji";
+  line-height: 1.7;
+  font-size: clamp(16px, 1.05vw + 0.9rem, 18px);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  hanging-punctuation: first last;
+}
+
+/* Global links & focus */
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+a:hover { text-underline-offset: 3px; }
+
+:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--accent) 70%, transparent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 1.25em 0 0.5em;
+}
+h1 {
+  font-size: clamp(2rem, 2.6vw + 1rem, 3rem);
+  font-weight: 800;
+}
+h2 {
+  font-size: clamp(1.5rem, 1.2vw + 1rem, 2rem);
+  font-weight: 700;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .35em;
+}
+h3 {
+  font-size: clamp(1.25rem, .9vw + 1rem, 1.5rem);
+  font-weight: 700;
+}
+
+/* Text elements */
+p { margin: 0 0 1em; }
+em { font-variation-settings: "slnt" -6; }
+strong { font-weight: 700; }
+small { color: var(--muted); font-size: .9em; }
+
+/* Images */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+/* Cards (use on recipe header, notes, etc.) */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Chips / meta tags (e.g., cook time, servings) */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: .75rem 0 0;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--accent) 8%, var(--surface));
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* Buttons */
+.btn, .menu {
+  appearance: none;
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: .6rem .9rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .2s ease, background .15s ease;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, .25);
+}
+.btn:hover, .menu:hover { transform: translateY(-1px); }
+.btn:active, .menu:active { transform: translateY(0); }
+
+/* Content width helpers */
+.prose > * + * { margin-top: 1em; }
+
+/* Lists: ingredients & steps */
+ul, ol { padding-left: 1.25rem; }
+
+.ingredients,
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ingredients li,
+.steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: .75rem;
+  padding: .6rem .75rem;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  margin-bottom: .6rem;
+}
+
+/* Custom bullets */
+.ingredients li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.steps {
+  counter-reset: step;
+}
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  display: inline-grid;
+  place-content: center;
+  width: 1.8rem; height: 1.8rem;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 15%, var(--surface));
+  color: var(--accent);
+  font-weight: 800;
+  border: 1px solid var(--line);
+}
+
+/* Notes block */
+.note {
+  border-left: 4px solid var(--accent);
+  padding: .75rem 1rem;
+  background: color-mix(in oklab, var(--accent) 8%, var(--surface));
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+/* Tables (if you ever list nutrition facts, etc.) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+th, td {
+  padding: .75rem .9rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+th {
+  background: color-mix(in oklab, var(--surface) 70%, var(--bg));
+  font-weight: 700;
+}
+tr:last-child td { border-bottom: 0; }
+
+/* ---------------------------------------
+   Navigation (keeps your classes)
+   --------------------------------------- */
+
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in oklab, var(--surface) 75%, var(--bg));
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid var(--line);
+  margin: -2rem -1.25rem 1.25rem;   /* stretch full bleed */
+  padding: .6rem 1.25rem;
+}
+
+.brand {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+
+/* Your original .menu improved */
+.menu {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  margin-left: auto;
+}
+
+/* Nav container */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Links */
+.nav-links {
+  width: 100%;
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: .75rem .5rem;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--text);
+  border-radius: 10px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: color-mix(in oklab, var(--accent) 18%, transparent);
+}
+
+/* Open state — keep :has support and add a class fallback */
+:has(.menu[aria-expanded="true"]) .nav-links,
+html.nav-open .nav-links {
+  display: block;
+}
+
+/* Wide screens */
+@media (min-width: 640px) {
+  .nav { gap: 2rem; }
+  .nav-links {
+    display: flex !important;
+    justify-content: flex-end;
+    gap: .25rem;
+    background: none;
+  }
+  .nav-links a {
+    display: inline-block;
+    padding: .6rem .85rem;
+  }
+  .menu { display: none; }
+}
+
+/* ---------------------------------------
+   Layout helpers for recipe pages
+   --------------------------------------- */
+
+.recipe-hero {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .recipe-hero {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+  }
+}
+
+.meta {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 1.25rem 0;
+  border-radius: 1px;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* ---------------------------------------
+   Print styles (for printing recipes)
+   --------------------------------------- */
+@media print {
+  @page { margin: 16mm; }
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: none;
+    max-width: none;
+    padding: 0;
+  }
+  .site-header, .menu, .nav, footer { display: none !important; }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: .9em; color: #6b7280;
+  }
+  img { box-shadow: none; }
+}
+
+/* ---------------------------------------
+   Motion preferences
+   --------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
