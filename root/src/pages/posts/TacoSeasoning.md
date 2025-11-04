@@ -21,12 +21,12 @@ layout: ../../layouts/MarkdownPostLayout.astro
 - Cholula hot sauce (approx 15 shakes)
 
 ## Instructions
-- Combine all dry ingredients (chili powder, garlic powder, onion powder, oregano, paprika, cumin, and salt) in a small bowl.
-- Mix well until evenly combined.
-- Brown 2 pounds of ground meat (beef, turkey, or chicken) in a large skillet.
-- Add the spice mixture to the cooked meat and stir to coat evenly.
-- Add approximately 15 shakes of Cholula hot sauce (or to taste).
-- Cook for 2-3 minutes more, stirring frequently, until fragrant and well combined.
+1. Combine all dry ingredients (chili powder, garlic powder, onion powder, oregano, paprika, cumin, and salt) in a small bowl.
+2. Mix well until evenly combined.
+3. Brown 2 pounds of ground meat (beef, turkey, or chicken) in a large skillet.
+4. Add the spice mixture to the cooked meat and stir to coat evenly.
+5. Add approximately 15 shakes of Cholula hot sauce (or to taste).
+6. Cook for 2-3 minutes more, stirring frequently, until fragrant and well combined.
 
 ## Notes
 This seasoning blend can be made ahead and stored in an airtight container for up to 6 months. Adjust the Cholula to your heat preference - start with less and add more as needed. Works great with ground beef, turkey, chicken, or even plant-based meat alternatives.
