@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import WakeLockToggle from './WakeLockToggle';
 
 const RecipeDetail = ({ recipe }) => {
   if (!recipe) {
@@ -28,8 +29,8 @@ const RecipeDetail = ({ recipe }) => {
 
   return (
     <div className="space-y-10 animate-fade-in w-full max-w-screen-md mx-auto">
-      {/* Back Button */}
-      <div className="mb-4">
+      {/* Back Button + Wake Lock Toggle */}
+      <div className="mb-4 flex items-center justify-between">
         <Link 
           to="/" 
           className="text-indigo-600 dark:text-cyan-400 hover:text-indigo-800 dark:hover:text-cyan-300 font-semibold inline-flex items-center focus-visible"
@@ -39,6 +40,7 @@ const RecipeDetail = ({ recipe }) => {
           </svg>
           Back to Recipes
         </Link>
+        <WakeLockToggle />
       </div>
 
       {/* Recipe Header */}
