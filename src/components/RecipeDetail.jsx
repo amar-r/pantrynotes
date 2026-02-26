@@ -40,12 +40,12 @@ const RecipeDetail = ({ recipe }) => {
       <h1 className="text-3xl font-semibold text-stone-900 dark:text-white mb-3 leading-tight">
         {recipe.title}
       </h1>
-      <p className="text-stone-500 dark:text-neutral-400 leading-relaxed mb-6">
+      <p className="text-stone-500 dark:text-neutral-400 leading-relaxed mb-6 print:hidden">
         {recipe.description}
       </p>
 
       {/* Meta + Tags */}
-      <div className="flex flex-wrap items-center gap-4 mb-10 pb-8 border-b border-stone-200 dark:border-neutral-800">
+      <div className="flex flex-wrap items-center gap-4 mb-10 pb-8 border-b border-stone-200 dark:border-neutral-800 print:hidden">
         {recipe.cookTime && (
           <span className="text-sm text-stone-500 dark:text-neutral-400">{recipe.cookTime}</span>
         )}
@@ -98,7 +98,7 @@ const RecipeDetail = ({ recipe }) => {
 
       {/* Notes */}
       {recipe.notes && (
-        <div className="pt-8 border-t border-stone-200 dark:border-neutral-800">
+        <div className="pt-8 border-t border-stone-200 dark:border-neutral-800 print:hidden">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-stone-400 dark:text-neutral-500 mb-4">
             Notes
           </h2>
