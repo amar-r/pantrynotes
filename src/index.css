@@ -209,4 +209,71 @@
   .animate-steam3 {
     animation: steam3 2.6s linear infinite;
   }
-} 
+}
+
+/* ── Print styles ─────────────────────────────────────────────── */
+@media print {
+  /* Hide everything except the recipe content */
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset page chrome */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Remove shadows and rounded corners — they don't print well */
+  .shadow-card,
+  .rounded-2xl,
+  .rounded-xl {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  /* Dark mode overrides — force light for print */
+  .dark\:bg-neutral-800,
+  .dark\:bg-neutral-900,
+  [class*="dark:bg-"] {
+    background: white !important;
+  }
+
+  [class*="dark:text-"] {
+    color: black !important;
+  }
+
+  /* Recipe title and headings */
+  h1 { font-size: 20pt; margin-bottom: 6pt; }
+  h2 { font-size: 14pt; margin-bottom: 4pt; }
+
+  /* Tags — keep them readable */
+  .rounded-full {
+    border: 1px solid #6366f1 !important;
+    color: #6366f1 !important;
+    background: white !important;
+  }
+
+  /* Instructions/ingredients grid — stack vertically for print */
+  .grid { display: block !important; }
+
+  /* Avoid breaking ingredient/instruction lists mid-page */
+  li { page-break-inside: avoid; }
+
+  /* Notes block */
+  .border-l-4 { border-left: 3px solid #6366f1 !important; }
+
+  /* Make sure links don't show URLs */
+  a::after { content: none !important; }
+
+  /* Page margins */
+  @page {
+    margin: 1.5cm 2cm;
+  }
+}

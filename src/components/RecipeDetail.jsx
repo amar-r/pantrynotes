@@ -29,8 +29,8 @@ const RecipeDetail = ({ recipe }) => {
 
   return (
     <div className="space-y-10 animate-fade-in w-full max-w-screen-md mx-auto">
-      {/* Back Button + Wake Lock Toggle */}
-      <div className="mb-4 flex items-center justify-between">
+      {/* Back Button + Controls */}
+      <div className="mb-4 flex items-center justify-between no-print">
         <Link 
           to="/" 
           className="text-indigo-600 dark:text-cyan-400 hover:text-indigo-800 dark:hover:text-cyan-300 font-semibold inline-flex items-center focus-visible"
@@ -40,7 +40,20 @@ const RecipeDetail = ({ recipe }) => {
           </svg>
           Back to Recipes
         </Link>
-        <WakeLockToggle />
+        <div className="flex items-center gap-2">
+          <WakeLockToggle />
+          <button
+            onClick={() => window.print()}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold transition-colors duration-200 border bg-white dark:bg-neutral-700 text-neutral-500 dark:text-neutral-300 border-neutral-200 dark:border-neutral-600 hover:border-indigo-400 dark:hover:border-cyan-500"
+            aria-label="Print recipe"
+            title="Print this recipe"
+          >
+            <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Print
+          </button>
+        </div>
       </div>
 
       {/* Recipe Header */}
