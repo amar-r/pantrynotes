@@ -75,6 +75,24 @@ const HomePage = () => {
           />
         </div>
       </div>
+
+      {/* Search + filters */}
+      <SearchBar
+        onSearch={setSearchTerm}
+        onTagFilter={setSelectedTag}
+        availableTags={availableTags}
+      />
+
+      {/* Recipe list */}
+      {recipesData.length === 0 ? (
+        <p className="text-sm text-stone-400 dark:text-neutral-600 py-12 text-center">No recipes yet.</p>
+      ) : (
+        <RecipeList
+          recipes={recipesData}
+          searchTerm={searchTerm}
+          selectedTag={selectedTag}
+        />
+      )}
     </>
   );
 };

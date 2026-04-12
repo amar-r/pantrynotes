@@ -188,5 +188,48 @@
       "Grill, roast, or pan-sear chicken as desired until fully cooked."
     ],
     "notes": "This blend works for chicken breasts, thighs, drumsticks, or wings. Also great on vegetables or potatoes! Adjust cayenne for more or less heat."
+  },
+  {
+    "id": 6,
+    "title": "Organic Chicken Fried Rice",
+    "description": "A wholesome, clean-eating twist on classic fried rice made with all organic ingredients. Packed with lean organic chicken, vibrant vegetables, and nutty brown rice — a satisfying one-pan meal the whole family will love.",
+    "cookTime": "30 minutes",
+    "servings": "4 servings",
+    "tags": ["Healthy", "Organic", "Chicken", "Rice", "One-Pan", "Clean Eating", "Meal Prep", "Gluten-Free"],
+    "ingredients": [
+      "1.5 lbs organic boneless skinless chicken breast, diced into 1/2-inch cubes",
+      "3 cups cooked organic brown rice (preferably day-old, chilled)",
+      "2 tablespoons organic sesame oil",
+      "1 tablespoon organic extra-virgin coconut oil",
+      "3 organic eggs, lightly beaten",
+      "1 cup organic frozen peas, thawed",
+      "1 cup organic carrots, finely diced",
+      "1 cup organic broccoli florets, small pieces",
+      "4 organic green onions, sliced (whites and greens separated)",
+      "4 cloves organic garlic, minced",
+      "1 tablespoon organic fresh ginger, grated",
+      "3 tablespoons organic tamari or organic soy sauce (low-sodium)",
+      "1 tablespoon organic rice vinegar",
+      "1 teaspoon organic coconut aminos",
+      "1/2 teaspoon organic white pepper",
+      "1/2 teaspoon organic sea salt (to taste)",
+      "1 tablespoon organic toasted sesame seeds (for garnish)"
+    ],
+    "instructions": [
+      "Cook organic brown rice ahead of time and refrigerate for at least 4 hours or overnight — cold rice fries up much better and stays fluffy.",
+      "In a small bowl, whisk together tamari, rice vinegar, and coconut aminos. Set sauce aside.",
+      "Heat a large wok or skillet over high heat. Add coconut oil and swirl to coat.",
+      "Add diced chicken in a single layer. Season with sea salt and white pepper. Cook without stirring for 2 minutes, then stir-fry until golden and cooked through (internal temp 165°F), about 5-6 minutes total. Remove chicken from the pan and set aside.",
+      "In the same pan over medium-high heat, add 1 teaspoon of sesame oil. Add beaten eggs and scramble gently until just set but still slightly soft. Remove and set aside with the chicken.",
+      "Add remaining sesame oil to the pan. Add carrots and stir-fry for 2 minutes until slightly softened.",
+      "Add white parts of green onions, garlic, and ginger. Stir-fry for 1 minute until fragrant.",
+      "Add broccoli florets and peas. Stir-fry for 2 minutes until bright green and tender-crisp.",
+      "Add the chilled brown rice to the pan, breaking up any clumps. Spread out and let it sit undisturbed for 1 minute to allow it to get slightly crispy, then stir-fry for 2-3 minutes.",
+      "Pour the sauce mixture over the rice and toss everything together until evenly coated.",
+      "Return the cooked chicken and scrambled eggs to the pan. Toss to combine and heat through for 1-2 minutes.",
+      "Taste and adjust seasoning with salt or additional tamari if needed.",
+      "Garnish with sliced green onion tops and toasted sesame seeds. Serve immediately."
+    ],
+    "notes": "Day-old rice is key — fresh rice is too moist and will steam instead of fry. For best results, use a very hot wok or cast-iron skillet. This recipe is naturally gluten-free when using certified organic tamari. Leftovers keep well in the refrigerator for up to 3 days and reheat great in a skillet."
   }
 ] 

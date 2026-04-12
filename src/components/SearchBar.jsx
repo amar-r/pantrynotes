@@ -10,8 +10,8 @@ const SearchBar = ({ onSearch, onTagFilter, availableTags }) => {
     onSearch(value);
   };
 
-  const handleTagChange = (e) => {
-    const value = e.target.value;
+  const handleTagChange = (tag) => {
+    const value = selectedTag === tag ? '' : tag;
     setSelectedTag(value);
     onTagFilter(value);
   };
@@ -22,6 +22,8 @@ const SearchBar = ({ onSearch, onTagFilter, availableTags }) => {
     onSearch('');
     onTagFilter('');
   };
+
+  const hasFilters = searchTerm || selectedTag;
 
   return (
     <div className="bg-white dark:bg-forest-900 border border-forest-100 dark:border-forest-800 rounded-2xl shadow-card dark:shadow-none p-5 sm:p-6 transition-colors duration-200">

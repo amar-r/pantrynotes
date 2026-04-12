@@ -57,6 +57,7 @@
   select.input option {
     @apply bg-white dark:bg-forest-900 text-bark dark:text-cream;
   }
+}
 
   .tag {
     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide
