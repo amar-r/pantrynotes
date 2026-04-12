@@ -3,42 +3,50 @@ import ThemeToggle from './ThemeToggle';
 
 const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-neutral-900">
+    <div className="min-h-screen flex flex-col bg-cream dark:bg-forest-950 transition-colors duration-200">
       {/* Header */}
-      <header className="bg-neutral-900 text-white dark:bg-neutral-900 dark:text-white sticky top-0 z-50 shadow-header">
-        <div className="w-full max-w-screen-lg mx-auto flex items-center justify-between px-4 py-3">
-          {/* Logo/Brand */}
-          <Link to="/" className="flex items-center space-x-3 group focus-visible">
-            <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center group-hover:bg-indigo-700 transition-colors duration-200 shadow-card">
-              <span className="text-white font-bold text-lg">P</span>
-            </div>
-            <span className="text-2xl font-extrabold tracking-tight">PantryNotes</span>
+      <header className="bg-forest-700 dark:bg-forest-900 sticky top-0 z-50 shadow-header">
+        <div className="w-full max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
+          <Link to="/" className="group focus-visible min-w-0 flex-shrink">
+            <span
+              className="text-xl sm:text-2xl font-bold text-cream tracking-tight leading-none truncate"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            >
+              Pantry Notes
+            </span>
           </Link>
-          {/* Nav */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-indigo-400 hover:text-white font-semibold transition-colors duration-200 focus-visible">
+
+          <nav className="flex items-center gap-3 sm:gap-5 flex-shrink-0 ml-4">
+            <Link
+              to="/"
+              className="text-cream/75 hover:text-cream text-xs sm:text-sm font-medium uppercase tracking-widest transition-colors duration-200 focus-visible hidden sm:block"
+            >
               Recipes
             </Link>
             <ThemeToggle />
           </nav>
-          {/* Mobile menu (just theme toggle for now) */}
-          <div className="md:hidden flex items-center">
-            <ThemeToggle />
-          </div>
         </div>
       </header>
-      {/* Main Content */}
-      <main className="flex-1 w-full max-w-screen-lg mx-auto px-4 py-10 bg-gray-50 dark:bg-neutral-900 transition-colors duration-200">
+
+      {/* Main */}
+      <main className="flex-1 bg-cream dark:bg-forest-950 transition-colors duration-200">
         {children}
       </main>
+
       {/* Footer */}
-      <footer className="bg-neutral-900 text-white dark:bg-neutral-900 dark:text-white border-t border-neutral-800 mt-auto">
-        <div className="w-full max-w-screen-lg mx-auto py-8 text-center space-y-2 px-4">
-          <p className="text-sm text-neutral-400 dark:text-neutral-500">
-            PantryNotes © {new Date().getFullYear()} • Powered by React & Tailwind CSS
+      <footer className="bg-cream dark:bg-forest-950 border-t-2 border-forest-100 dark:border-forest-800 mt-auto transition-colors duration-200">
+        <div className="w-full max-w-screen-xl mx-auto py-10 text-center px-6 space-y-2">
+          <p
+            className="text-lg font-bold text-forest-700 dark:text-forest-300"
+            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          >
+            Pantry Notes
           </p>
-          <p className="text-xs text-neutral-500 dark:text-neutral-600">
-            Disclaimer: These recipes are shared for informational purposes only. Please use your own judgment regarding food safety and dietary restrictions. The author is not responsible for any adverse effects from following these recipes.
+          <p className="text-sm text-neutral-400 dark:text-forest-600">
+            A personal collection of recipes worth keeping.
+          </p>
+          <p className="text-xs text-neutral-300 dark:text-forest-700 max-w-xl mx-auto pt-2">
+            These recipes are shared for personal reference. Use your own judgment regarding food safety and dietary needs.
           </p>
         </div>
       </footer>
@@ -46,4 +54,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout; 
+export default Layout;
