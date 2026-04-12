@@ -135,6 +135,37 @@
     "notes": "The mustard won't affect the taste but helps the rub stick. Don't rush the process - low and slow is key for tender pulled pork. Internal temp of 204°F ensures the collagen breaks down properly for easy shredding."
   },
   {
+    "id": 6,
+    "title": "Smash Burgers",
+    "description": "Crispy-edged, juicy smash burgers made with grass-fed 85/15 beef on a hot griddle. Simple technique, big flavor — better than any restaurant version.",
+    "cookTime": "15 minutes",
+    "servings": "2–4 servings",
+    "tags": ["Beef", "Burgers", "American", "Quick", "Griddle"],
+    "ingredients": [
+      "Grass-fed organic ground beef, 85/15",
+      "Sliced sharp cheddar cheese",
+      "Lettuce",
+      "Onions",
+      "Ketchup",
+      "Mayo",
+      "Garlic",
+      "Salt",
+      "Pepper",
+      "Ghee (for spreading on the griddle)"
+    ],
+    "instructions": [
+      "Form the beef into loose balls — don't overwork the meat.",
+      "Heat your griddle and spread ghee across the surface.",
+      "Place beef balls on the griddle and immediately smash them flat using a smasher with parchment paper between the smasher and the meat to keep it clean and prevent sticking.",
+      "Sprinkle the top with salt, pepper, and garlic.",
+      "Flip when the edges start to brown and the top side is no longer raw-looking. Season again on the second side.",
+      "Lay a slice of sharp cheddar on each patty and let it melt.",
+      "Place buns face-down on the griddle to toast until golden.",
+      "Assemble: spread mayo and ketchup on the buns, add lettuce and onions, then stack the cheesy patties."
+    ],
+    "notes": "The parchment paper trick is key — use it between the smasher and the beef to prevent sticking and keep cleanup easy. 85/15 fat ratio gives you the crispy lacy edges that make a smash burger. Don't skip the ghee — it handles high heat better than butter and adds a nutty richness."
+  },
+  {
     "id": 5,
     "title": "All-Purpose Chicken Seasoning",
     "description": "A simple, versatile spice blend for chicken—perfect for grilling, roasting, or pan-searing. Adds flavor and a touch of smokiness to any cut.",
