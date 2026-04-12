@@ -26,45 +26,59 @@ const SearchBar = ({ onSearch, onTagFilter, availableTags }) => {
   const hasFilters = searchTerm || selectedTag;
 
   return (
-    <div className="mb-8">
-      {/* Search input */}
-      <div className="relative mb-4">
-        <svg className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        <input
-          type="text"
-          placeholder="Search recipes..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          className="w-full pl-6 pr-4 py-2 text-sm bg-transparent border-b border-stone-300 dark:border-neutral-700 focus:border-stone-900 dark:focus:border-neutral-300 focus:outline-none text-stone-900 dark:text-white placeholder-stone-400 dark:placeholder-neutral-600 transition-colors duration-150"
-        />
+    <div className="bg-white dark:bg-forest-900 border border-forest-100 dark:border-forest-800 rounded-2xl shadow-card dark:shadow-none p-5 sm:p-6 transition-colors duration-200">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {/* Search */}
+        <div className="sm:col-span-2">
+          <label htmlFor="search" className="block text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-cream/40 mb-2">
+            Search
+          </label>
+          <div className="relative">
+            <input
+              id="search"
+              type="text"
+              placeholder="Name, ingredient, description..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+              className="input pl-10"
+            />
+            <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400 dark:text-forest-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Category filter */}
+        <div>
+          <label htmlFor="tag-filter" className="block text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-cream/40 mb-2">
+            Category
+          </label>
+          <select
+            id="tag-filter"
+            value={selectedTag}
+            onChange={handleTagChange}
+            className="input appearance-none cursor-pointer"
+          >
+            <option value="">All Categories</option>
+            {availableTags.map(tag => (
+              <option key={tag} value={tag}>{tag}</option>
+            ))}
+          </select>
+        </div>
       </div>
 
-      {/* Tag filters */}
-      {availableTags.length > 0 && (
-        <div className="flex flex-wrap gap-2">
-          {availableTags.map(tag => (
-            <button
-              key={tag}
-              onClick={() => handleTagChange(tag)}
-              className={`text-xs px-3 py-1 rounded-full border transition-colors duration-150 ${
-                selectedTag === tag
-                  ? 'bg-stone-900 dark:bg-white text-white dark:text-stone-900 border-stone-900 dark:border-white'
-                  : 'bg-transparent text-stone-500 dark:text-neutral-400 border-stone-300 dark:border-neutral-700 hover:border-stone-500 dark:hover:border-neutral-500'
-              }`}
-            >
-              {tag}
-            </button>
-          ))}
-          {hasFilters && (
-            <button
-              onClick={clearFilters}
-              className="text-xs px-3 py-1 text-stone-400 dark:text-neutral-500 hover:text-stone-700 dark:hover:text-neutral-300 transition-colors duration-150"
-            >
-              Clear
-            </button>
-          )}
+      {/* Active filters */}
+      {(searchTerm || selectedTag) && (
+        <div className="mt-4 pt-4 border-t border-forest-50 dark:border-forest-800 flex flex-wrap items-center gap-3">
+          <span className="text-xs text-neutral-400 dark:text-cream/40 font-medium">Active:</span>
+          {searchTerm && <span className="tag">"{searchTerm}"</span>}
+          {selectedTag && <span className="tag">{selectedTag}</span>}
+          <button
+            onClick={clearFilters}
+            className="ml-auto text-xs font-semibold text-forest-600 dark:text-forest-400 hover:text-forest-800 dark:hover:text-forest-200 transition-colors"
+          >
+            Clear all
+          </button>
         </div>
       )}
     </div>

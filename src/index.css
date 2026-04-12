@@ -1,66 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-stone-200 dark:border-neutral-800;
-  }
-
-  body {
-    @apply bg-stone-50 dark:bg-neutral-950 text-stone-900 dark:text-neutral-100 font-sans antialiased;
-    line-height: 1.6;
-  }
-
   html {
     scroll-behavior: smooth;
   }
 
+  body {
+    @apply bg-cream dark:bg-forest-950 text-bark dark:text-cream font-sans antialiased transition-colors duration-200;
+    line-height: 1.65;
+  }
+
   *:focus-visible {
-    @apply outline-none ring-2 ring-stone-900 dark:ring-neutral-300 ring-offset-2 ring-offset-stone-50 dark:ring-offset-neutral-950;
+    @apply outline-none ring-2 ring-forest-500 ring-offset-2 ring-offset-cream dark:ring-offset-forest-950;
   }
 
   ::selection {
-    @apply bg-stone-200 dark:bg-neutral-700;
+    @apply bg-terra-100 dark:bg-terra-900 text-bark dark:text-cream;
   }
 }
 
 @layer components {
+  .card {
+    @apply bg-white dark:bg-forest-900 border border-forest-100 dark:border-forest-800 rounded-2xl shadow-card dark:shadow-none;
+  }
+
+  .section {
+    @apply card p-6 md:p-8;
+  }
+
+  .btn-primary {
+    @apply bg-forest-700 hover:bg-forest-800 text-cream px-6 py-3 rounded-xl font-medium
+           transition-colors duration-200 shadow-subtle inline-flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white dark:bg-forest-900 text-bark dark:text-cream
+           border border-forest-200 dark:border-forest-700
+           hover:bg-cream dark:hover:bg-forest-800 hover:border-forest-300 dark:hover:border-forest-600
+           px-6 py-3 rounded-xl font-medium transition-all duration-200 shadow-subtle inline-flex items-center gap-2;
+  }
+
+  .input {
+    @apply w-full px-4 py-3
+           bg-white dark:bg-forest-900
+           border border-forest-200 dark:border-forest-700
+           rounded-xl
+           focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500
+           text-bark dark:text-cream
+           placeholder-neutral-400 dark:placeholder-forest-500
+           transition-all duration-200 shadow-subtle dark:shadow-none;
+  }
+
+  /* Keep select options readable in dark mode */
+  select.input option {
+    @apply bg-white dark:bg-forest-900 text-bark dark:text-cream;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide
+           bg-terra-50 dark:bg-terra-900/40 text-terra-700 dark:text-terra-300
+           border border-terra-100 dark:border-terra-800/60;
+  }
+
+  .divider {
+    @apply border-t border-forest-100 dark:border-forest-800;
+  }
+
+  .text-muted {
+    @apply text-neutral-500 dark:text-cream/60;
+  }
+
   .focus-visible {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900 dark:focus-visible:ring-neutral-300 focus-visible:ring-offset-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2;
   }
 
-  .animate-fade-in {
-    animation: fade-in 0.2s ease-out both;
+  .theme-toggle {
+    @apply p-2.5 rounded-xl
+           bg-forest-600 hover:bg-forest-500 dark:bg-forest-800 dark:hover:bg-forest-700
+           text-cream/80 hover:text-cream
+           transition-all duration-200;
   }
 
-  @keyframes fade-in {
-    from { opacity: 0; transform: translateY(4px); }
-    to   { opacity: 1; transform: translateY(0); }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { @apply bg-cream dark:bg-forest-950; }
+  ::-webkit-scrollbar-thumb { @apply bg-forest-200 dark:bg-forest-700 rounded-full hover:bg-forest-300 dark:hover:bg-forest-600; }
 }
 
-/* ── Print styles ─────────────────────────────────────────────── */
-@media print {
-  header, footer, nav, .no-print {
-    display: none !important;
+@layer utilities {
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
-
-  body {
-    background: white !important;
-    color: black !important;
-    font-size: 12pt;
-  }
-
-  h1 { font-size: 20pt; margin-bottom: 6pt; }
-  h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8pt; }
-
-  .grid { display: block !important; }
-
-  li, p { page-break-inside: avoid; }
-
-  a::after { content: none !important; }
-
-  @page { margin: 1.5cm 2cm; }
 }
