@@ -4,57 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe OG Preview</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
-      body { margin: 0; }
+        body { margin: 0; }
     </style>
 </head>
 <body>
     <!-- OG Image Template - 1200x630px -->
-    <div class="flex items-center justify-center min-h-screen" style="width: 1200px; height: 630px; background: linear-gradient(120deg, #6366f1 0%, #06b6d4 100%);">
-        <div class="bg-white/90 rounded-2xl shadow-2xl w-[1100px] h-[500px] flex flex-col justify-center px-20 py-14">
+    <div style="width: 1200px; height: 630px; background-color: #243f12; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+        <!-- Subtle background accents -->
+        <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 30%, rgba(45,80,22,0.8) 0%, transparent 50%), radial-gradient(ellipse at 85% 75%, rgba(15,30,7,0.5) 0%, transparent 50%);"></div>
+
+        <!-- Card -->
+        <div style="position: relative; z-index: 1; background-color: #faf8f5; border-radius: 16px; width: 1080px; min-height: 480px; padding: 48px 56px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 25px 50px rgba(0,0,0,0.3);">
+            <!-- Recipe label -->
+            <p style="font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: #a84f22; margin: 0 0 12px 0;">
+                Recipe
+            </p>
+
             <!-- Title -->
-            <h1 id="recipe-title" class="text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+            <h1 id="recipe-title" style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 800; color: #1a1208; margin: 0 0 16px 0; line-height: 1.15;">
                 Chicken Shawarma Bowls
             </h1>
+
             <!-- Description -->
-            <p id="recipe-description" class="text-2xl text-neutral-700 mb-8 max-w-3xl">
+            <p id="recipe-description" style="font-family: 'Inter', sans-serif; font-size: 20px; color: #574a3a; margin: 0 0 28px 0; line-height: 1.5; max-width: 800px;">
                 Flavorful Middle Eastern-inspired chicken bowls with aromatic spices, fresh vegetables, and wholesome grains.
             </p>
+
             <!-- Meta & Tags -->
-            <div class="flex flex-wrap items-center gap-8 mb-6">
-                <div class="flex items-center gap-4">
-                    <span id="cook-time" class="text-lg font-bold bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent">45 minutes</span>
-                    <span class="text-neutral-400">|</span>
-                    <span id="servings" class="text-lg font-bold bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent">4-6 servings</span>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-bottom: 28px;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <span id="cook-time" style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; color: #2d5016;">45 minutes</span>
+                    <span style="color: #c1d9b5;">|</span>
+                    <span id="servings" style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; color: #2d5016;">4-6 servings</span>
                 </div>
-                <div id="tags-container" class="flex flex-wrap gap-3">
-                    <span class="inline-flex items-center px-5 py-2 rounded-full text-base font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
+                <div id="tags-container" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span style="display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 9999px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; background-color: #e0ecda; color: #2d5016; border: 1px solid #c1d9b5;">
                         Mediterranean
                     </span>
-                    <span class="inline-flex items-center px-5 py-2 rounded-full text-base font-semibold bg-cyan-50 text-cyan-700 border border-cyan-100">
+                    <span style="display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 9999px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; background-color: #fbe3d1; color: #8a3d1b; border: 1px solid #f6c4a3;">
                         Healthy
                     </span>
-                    <span class="inline-flex items-center px-5 py-2 rounded-full text-base font-semibold bg-purple-50 text-purple-700 border border-purple-100">
+                    <span style="display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 9999px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; background-color: #e0ecda; color: #2d5016; border: 1px solid #c1d9b5;">
                         Meal Prep
                     </span>
                 </div>
             </div>
+
             <!-- Footer/Brand -->
-            <div class="flex items-center gap-4 mt-auto">
-                <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <span class="text-white font-bold text-2xl">P</span>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+                <div style="width: 36px; height: 36px; background-color: #2d5016; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: #faf8f5; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px;">P</span>
                 </div>
-                <span class="text-xl font-bold text-neutral-700">PantryNotes</span>
+                <span style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #1a1208;">Pantry Notes</span>
             </div>
         </div>
+
+        <!-- Bottom accent bar -->
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #ef9d6a, #e8763f, #c4622d);"></div>
     </div>
+
     <script>
-        // Function to update the preview with recipe data
+        // Tag style alternation: forest and terra
+        const tagStyles = [
+            { bg: '#e0ecda', color: '#2d5016', border: '#c1d9b5' },
+            { bg: '#fbe3d1', color: '#8a3d1b', border: '#f6c4a3' },
+        ];
+
         function updatePreview(recipe) {
             document.getElementById('recipe-title').textContent = recipe.title;
             document.getElementById('recipe-description').textContent = recipe.description;
-            // Cook time and servings
             const cookTimeEl = document.getElementById('cook-time');
             const servingsEl = document.getElementById('servings');
             cookTimeEl.textContent = recipe.cookTime;
@@ -64,20 +86,14 @@
             // Update tags
             const tagsContainer = document.getElementById('tags-container');
             tagsContainer.innerHTML = '';
-            const tagGradients = [
-                'bg-indigo-50 text-indigo-700 border-indigo-100',
-                'bg-cyan-50 text-cyan-700 border-cyan-100',
-                'bg-purple-50 text-purple-700 border-purple-100',
-                'bg-pink-50 text-pink-700 border-pink-100',
-                'bg-yellow-50 text-yellow-700 border-yellow-100',
-            ];
             recipe.tags.slice(0, 5).forEach((tag, index) => {
+                const style = tagStyles[index % tagStyles.length];
                 const tagElement = document.createElement('span');
-                tagElement.className = `inline-flex items-center px-5 py-2 rounded-full text-base font-semibold ${tagGradients[index % tagGradients.length]} border`;
+                tagElement.style.cssText = `display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 9999px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; background-color: ${style.bg}; color: ${style.color}; border: 1px solid ${style.border};`;
                 tagElement.textContent = tag;
                 tagsContainer.appendChild(tagElement);
             });
         }
     </script>
 </body>
-</html> 
+</html>
